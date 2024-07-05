@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,10 +9,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'hero-pattern': "url('/background2.svg')",
       },
+      height: {
+        'large': '85%',
+        'small': '65%',
+        'creator': '50%'
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        anton: ["Anton SC", "serif"],
+        quicksand: ["Quicksand", "serif"],
+        archivo: ["Archivo+Black", "sans-serif"]
+      }
     },
   },
   plugins: [],
