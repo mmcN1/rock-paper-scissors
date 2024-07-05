@@ -1,5 +1,5 @@
 import { LayoutGroup, motion } from "framer-motion";
-import React from "react";
+import React, { Suspense } from "react";
 import UserNameInfo from "../GameSection/UserNameInfo";
 
 const Header = ({ score, gameMode }) => {
@@ -22,7 +22,9 @@ const Header = ({ score, gameMode }) => {
             gameMode ? "h-40" : "h-28"
           } rounded w-[25%] p-[10px] text-center bg-opacity-95 bg-white max-md:w-[40%] font-montserrat`}
         >
+          <Suspense fallback={"...Loading"}>
           <UserNameInfo />
+          </Suspense>
           <h1 className="text-[#3b4363] self-start md:">{score}</h1>
         </div>
       </div>

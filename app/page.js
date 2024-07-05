@@ -12,7 +12,6 @@ export default function Home() {
 
   
   return (
-    <Suspense fallback={"Loading..."}>
     <main className="flex min-h-screen flex-col items-center  font-montserrat ">
 <div className=" w-full h-40 bg-cover bg-[url('./background2.jpeg')] blur-xl opacity-25"></div>
       <div className="flex flex-col p-2">
@@ -41,6 +40,5 @@ export default function Home() {
         )}
       </div>
     </main>
-    </Suspense>
   );
 }
