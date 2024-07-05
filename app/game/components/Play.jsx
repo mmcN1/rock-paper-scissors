@@ -26,10 +26,10 @@ export const Play = ({
       setSelect(value);
       setPlay(true);
       
-      // setTimeout(() => {
-      //   setGameTurns((prevCount) => (prevCount -= 1));
-      //   setSelect(-1);
-      // }, 5000);
+      setTimeout(() => {
+        setGameTurns((prevCount) => (prevCount -= 1));
+        setSelect(-1);
+      }, 5000);
     } else {
       return <p>finish</p>;
     }

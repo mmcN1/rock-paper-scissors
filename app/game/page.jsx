@@ -22,9 +22,6 @@ const Page = () => {
   const [userScore, setUserScore] = useState(0);
   const [vsScore, setVsScore] = useState(0);
 
-  console.log(gameTurns)
-
-
   const num = gameMode ? 5 : 3;
 
   const result = randomInt(num);

@@ -46,13 +46,10 @@ const Result = ({
   useEffect(() => {
     if (GameRules[vsComputer].beats.includes(userSelected)) {
       setRoundScore((count) => (count -= 1));
-      console.log("lose");
     } else {
       if (GameRules[vsComputer].value === userSelected) {
-        console.log("tie");
       } else {
         setRoundScore((count) => (count += 1));
-        console.log("win");
       }
     }
   }, [gameTurns]);
@@ -132,17 +129,25 @@ const Result = ({
             </button>
           </motion.button>
         )}
-        <h1 className="flex absolute top-[110%] right-3/4 font-montserrat font-extrabold">{userScore}</h1>
-        <p className="flex absolute   top-[115%] font-anton font-extralight">VS</p>
-        <h1 className="flex absolute  top-[-80%] font-montserrat font-extrabold">Remain Round</h1>
-        <p className="flex absolute mr-1 top-[-55%] font-montserrat font-extrabold">{gameTurns}</p>
+        <h1 className="flex absolute top-[110%] right-3/4 font-montserrat font-extrabold">
+          {userScore}
+        </h1>
+        <p className="flex absolute   top-[115%] font-anton font-extralight">
+          VS
+        </p>
+        <h1 className="flex absolute  top-[-80%] font-montserrat font-extrabold">
+          Remain Round
+        </h1>
+        <p className="flex absolute mr-1 top-[-55%] font-montserrat font-extrabold">
+          {gameTurns}
+        </p>
         {canShow2 ? (
           <>
             {canShow ? (
               <>
                 {GameRules[vsComputer].value === userSelected ? (
                   <motion.button
-                  initial={{ y: 0, scale: 1, right: 0 }}
+                    initial={{ y: 0, scale: 1, right: 0 }}
                     animate={{ scale: 1 }}
                     className={`${
                       playCss[GameRules[vsComputer].value]
@@ -213,7 +218,9 @@ const Result = ({
             </button>
           </motion.button>
         )}
-        <h1 className="flex absolute top-[110%] left-3/4 font-montserrat font-extrabold">{vsScore}</h1>
+        <h1 className="flex absolute top-[110%] left-3/4 font-montserrat font-extrabold">
+          {vsScore}
+        </h1>
       </div>
     </LayoutGroup>
   );
