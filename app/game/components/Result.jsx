@@ -10,6 +10,7 @@ const Result = ({
   setRoundScore,
   gameTurns,
   userScore,
+  gameMode,
   setUserScore,
   vsScore,
   setVsScore,
@@ -57,7 +58,7 @@ const Result = ({
   return (
     <LayoutGroup>
       {/*if statement ile yap */}
-      <div className={resultCss.container}>
+      <div className={`${resultCss.container}  ${gameMode ? "mt-10" : ""}`}>
         {canShow2 ? (
           <>
             {canShow ? (
