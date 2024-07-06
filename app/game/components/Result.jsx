@@ -136,7 +136,7 @@ const Result = ({
           VS
         </p>
         <h1 className="flex absolute  top-[-80%] font-montserrat font-extrabold">
-          Remain Round
+          Remaining Round
         </h1>
         <p className="flex absolute mr-1 top-[-55%] font-montserrat font-extrabold">
           {gameTurns}
